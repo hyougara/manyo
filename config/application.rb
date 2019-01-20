@@ -9,7 +9,10 @@ Bundler.require(*Rails.groups)
 module Manyo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.time_zone = 'Tokyo'
+    
     config.load_defaults 5.2
+
     config.generators do |g|
       g.test_framework :rspec,
       fixtures: false,

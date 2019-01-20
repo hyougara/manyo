@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe Task do
-  it "name" do
-    task = Task.new(name: "yuki")
-    expect(task).to be_valid
+  describe "validations" do
+    it{ is_expected.to validate_presence_of(:name)}
+    it{ is_expected.to validate_presence_of(:content)}
   end
 end
