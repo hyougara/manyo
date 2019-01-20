@@ -33,12 +33,9 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'sqlite3'
+
 end
 
-group :production do
-  gem 'pg'
-end
 
 group :test do
   gem 'capybara', '>= 2.15'
@@ -47,5 +44,5 @@ group :test do
   gem "factory_bot_rails"
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rails-controller-testing'
+  gem 'spring-commands-rspec'
 end
-
