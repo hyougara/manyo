@@ -2,6 +2,8 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
+    @search = Task.ransack(params[:q])
+    @result = @search.result
     @tasks = Task.all
   end
 
@@ -43,7 +45,7 @@ class TasksController < ApplicationController
       @task = Task.find(params[:id])
     end
 
-    def task_params
-      params.require(:task).permit(:name, :content)
+    def task_params 
+      params.require(:task).permit(:name, :content, :status)
     end
 end

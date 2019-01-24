@@ -1,4 +1,10 @@
 header
   .header-list
     ul
-      li = link_to "タスク", new_task_path
+      - if logged_in?
+          li = link_to "profile", current_user
+          li = link_to "ログアウト", logout_path, method: :delete
+      - else
+          li = link_to "タスク作成", new_task_path
+          li = link_to "user登録", new_user_path
+          li = link_to "ログイン", login_path

@@ -22,6 +22,7 @@ gem "jquery-ui-rails"
 gem "jquery-rails"
 gem "rails-i18n"
 gem 'enum_help'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
